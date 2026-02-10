@@ -1,140 +1,119 @@
-CS 800 – Assignment 2: Presence, Tools, RCR
+# CS 800 – Assignment 2: Presence, Tools, RCR  
+**Course:** CS 800 – Research Methods, Spring 2026  
+**Due:** 2026-02-09  
 
-Course: CS 800 – Research Methods, Spring 2026
-Due: 2026-02-09
+---
 
-1. Assignment Description
+## 1. Assignment Description
 
-This assignment demonstrates my professional online presence, familiarity with academic and research tools, LaTeX proficiency, and completion of the Responsible Conduct of Research (RCR) training.
+This assignment demonstrates professional online presence, familiarity with research tools, LaTeX proficiency, and completion of Responsible Conduct of Research (RCR) training.
 
-The components of this assignment include:
+The components include:
 
-Professional online accounts
+- Professional online accounts  
+- Academic webpage  
+- LaTeX assignment in Overleaf  
+- RCR certificate  
+- Walkthrough video  
 
-Academic webpage
+---
 
-LaTeX assignment completed using Overleaf
+## 2. Professional Accounts
 
-RCR training completion
+### 2.1 Google Scholar
 
-Walkthrough video
+**Profile link:**  
+https://scholar.google.com/citations?hl=en&user=7Vkqm00AAAAJ&view_op=list_works&sortby=pubdate  
 
-2. Professional Accounts
-2.1 Google Scholar
+**Screenshot:**  
+![Google Scholar](Images/google_scholar.png)
 
-Profile Link:
-https://scholar.google.com/citations?hl=en&user=7Vkqm00AAAAJ&view_op=list_works&sortby=pubdate
+**Faculty / Researchers followed:**
 
-Screenshot:
+**ODU Faculty**
+- Jonathan Takeshita  
+- Daniel Takabi  
+- Mohammad GhasemiGol  
+- Sampath Jayarathna  
+- Pratip Rana  
 
+**Additional Researchers**
+- Traian Rebedea  
+- Shaona Ghosh  
+- Keltin Grimes  
+- Francisco Aguilera-Martinez  
+- Dezhang Kong  
 
-Faculty / Researchers Followed
+---
 
-ODU Faculty:
+### 2.2 ORCID
 
-Jonathan Takeshita
+**Profile link:**  
+https://orcid.org/0009-0003-4705-9229  
 
-Daniel Takabi
+**Screenshot:**  
+![ORCID](Images/orcid.png)
 
-Mohammad GhasemiGol
+---
 
-Sampath Jayarathna
+### 2.3 LinkedIn
 
-Pratip Rana
+**Profile link:**  
+https://www.linkedin.com/in/protiva-das-504147198/  
 
-Additional Researchers:
+**Screenshot:**  
+![LinkedIn](Images/linkedin.png)
 
-Traian Rebedea
+**Other accounts linked:**  
+Google Scholar, ORCID, Academic Webpage
 
-Shaona Ghosh
+---
 
-Keltin Grimes
+## 3. Academic Webpage
 
-Francisco Aguilera-Martinez
+**Webpage link:**  
+https://protivapritthi.github.io/das_protiva_pritthi.github.io/  
 
-Dezhang Kong
+**Screenshot:**  
+![Academic Webpage](Images/personal_profile.png)
 
-2.2 ORCID
+**Notes:**  
+Bi-directional linkage to all professional accounts is included.
 
-Profile Link:
-https://orcid.org/0009-0003-4705-9229
+---
 
-Screenshot:
+## 4. LaTeX Assignment (Overleaf)
 
+**PDF Download:**  
+[Assignment 2 PDF](Latex_CS800_protiva.pdf)
 
-2.3 LinkedIn
+**Notes:**  
+Used Overleaf template from class Slide 65. Replaced all URLs, images, and text with personal information.
 
-Profile Link:
-https://www.linkedin.com/in/protiva-das-504147198/
+---
 
-Screenshot:
+## 5. Responsible Conduct of Research (RCR)
 
+**Certificate PDF:**  
+[RCR Certificate](citi.pdf)
 
-Other Accounts Linked:
-Google Scholar, ORCID, Academic Webpage, GitHub
+**Completion Notes:**  
+Completed **“Responsible Conduct of Research for Engineers”** modules at Old Dominion University.
 
-3. Academic Webpage
+---
 
-Webpage Link:
-https://protivapritthi.github.io/das_protiva_pritthi.github.io/
+## 6. Walkthrough Video
 
-Screenshot:
+**YouTube Link:**  
+[Assignment 2 Walkthrough Video](PASTE_YOUTUBE_LINK_HERE)
 
+**Notes:**  
+Demonstrates all accounts, RCR completion, and academic webpage.
 
-Notes:
+---
 
-Bi-directional linkage to all professional accounts is included
+## 7. Notes / Additional Information
 
-The webpage contains my email address and links to Google Scholar, ORCID, LinkedIn, and GitHub
-
-The page is designed to be visually professional and easy to navigate
-
-4. LaTeX Assignment (Overleaf)
-
-PDF Download:
-Assignment 2 LaTeX PDF
-
-Notes:
-
-Created using Overleaf
-
-Used the template provided in class (Slide 65)
-
-Replaced all URLs, images, and text with my personal and academic information
-
-5. Responsible Conduct of Research (RCR)
-
-Certificate / Proof:
-RCR Certificate
-
-Completion Notes:
-
-Completed the “Responsible Conduct of Research for Engineers” modules at Old Dominion University
-
-6. Walkthrough Video
-
-YouTube Link:
-Assignment 2 Walkthrough Video
-
-Notes:
-The video demonstrates:
-
-Google Scholar profile and followed faculty/researchers
-
-ORCID profile
-
-LinkedIn profile
-
-Academic webpage
-
-LaTeX PDF
-
-RCR completion proof
-
-7. Notes / Additional Information
-
-All professional accounts include profile pictures and completed bios
-
-Repository structure is organized for easy navigation
-
-Links between accounts are bi-directional where applicable
+- All accounts include profile pictures and filled bios  
+- Repository structure is organized for easy navigation  
+- Links are bi-directional where applicable  
