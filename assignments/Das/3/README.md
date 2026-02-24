@@ -216,4 +216,4 @@ The authors propose NEXUS, a modular framework that builds semantic attack netwo
 
 A short YouTube video walking through the papers and discussing the 1st-pass highlights:
 
-**Video Link:** [ YOUTUBE LINK HERE ]
+**Video Link:** https://youtu.be/spAzK32RXmI
