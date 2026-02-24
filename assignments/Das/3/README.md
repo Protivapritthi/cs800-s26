@@ -91,7 +91,7 @@ The authors design a hidden-state reconstruction attack that recovers user promp
 - Shows that permutation- and noise-based defenses are insecure.  
 - Proposes Cascade as an efficient privacy-preserving defense.
 
-**Screenshot (Page 1):**  
+**Screenshot (Page 2):**  
 ![](paper_images/paper%202.png)
 
 **Marked-up PDF:**  
@@ -128,7 +128,7 @@ The authors conduct a systematic adversarial audit using realistic prompt pertur
 - Shows static analyzers overestimate security.  
 - Proposes best practices for robust evaluation.
 
-**Screenshot (Page 1):**  
+**Screenshot (Page 3):**  
 ![](paper_images/paper%203.png)
 
 **Marked-up PDF:**  
@@ -166,7 +166,7 @@ The paper systematically surveys backdoor attacks and defenses across training a
 - Categorizes defenses into sample and model inspection.  
 - Identifies open challenges and future directions.
 
-**Screenshot (Page 1):**  
+**Screenshot (Page 4):**  
 ![](paper_images/paper%204.png)
 
 **Marked-up PDF:**  
@@ -204,7 +204,7 @@ The authors propose NEXUS, a modular framework that builds semantic attack netwo
 - Proposes ThoughtNet and feedback-driven refinement.  
 - Achieves higher attack success rates and diversity.
 
-**Screenshot (Page 1):**  
+**Screenshot (Page 5):**  
 ![](paper_images/paper%205.png)
 
 **Marked-up PDF:**  
@@ -216,4 +216,4 @@ The authors propose NEXUS, a modular framework that builds semantic attack netwo
 
 A short YouTube video walking through the papers and discussing the 1st-pass highlights:
 
-**Video Link:** PASTE YOUR UNLISTED YOUTUBE LINK HERE
+**Video Link:** [ YOUTUBE LINK HERE ]
