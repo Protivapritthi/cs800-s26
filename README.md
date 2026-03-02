@@ -32,8 +32,11 @@ CRN 32738
     * Entry types, https://www.bibtex.com/e/entry-types/ 
     * Example document at Overleaf using BibTeX, https://www.overleaf.com/project/5e4bfe2d474903000194980d 
   * [Class slides](https://docs.google.com/presentation/d/1e5ny5Ar2u4q6edq3HfcbXDgX-jEvEPN8NbPf6Yk1bMk/edit)
-* Week 03:	Feb 9	Reading Academic Papers  
-* Week 04: Feb 16 Academic Publishing and Reviewing 
+* Week 03:	Feb 9	Post-PhD Careers, Reading Academic Papers  
+  * [Class notes](https://docs.google.com/document/d/1ZIlCog36OoNKymgWZkJ5D8142JQ19WGjbaqW34ymd_8/edit)
+  * [Class slides](https://docs.google.com/presentation/d/1Sj1vgQ_8m0WVEi45PX7fexI0hjmLlGUVVpJIvCk1hg8/edit)
+* Week 04: Feb 16 Related Work and Ethics
+  * [Class slides](https://docs.google.com/presentation/d/1iplY-NFOtmETeDL0HUKEdZptg72iRb62J4P6q55sEds/edit)
 * Week 05:	Feb 23 Academic Communication - Writing  
 * Week 06: Mar 2	Academic Communication - Presenting 
 * Week 07:	Mar 9	Visualization Basics, Intro to R  
@@ -54,3 +57,7 @@ CRN 32738
    * [Due: Feb 2](/assignments/assignment-01.md)
 * Assignment 2: Academic Presence, RCR
    * [Due: Feb 9](/assignments/assignment-02.md)
+* Assignment 3: Reading Papers
+   * [Due: Feb 23](/assignments/assignment-03.md)
+* Assignment 4: Literature Review
+   * [Due: Mar 9](/assignments/assignment-04.md)
