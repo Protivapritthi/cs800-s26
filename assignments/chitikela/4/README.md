@@ -41,6 +41,7 @@ These are the same papers used in Assignment 3.
 |------|-------------|
 | [latex/litreview.tex](latex/litreview.tex) | LaTeX source for the literature review |
 | [latex/litreview.bib](latex/litreview.bib) | BibTeX entries for all five papers |
+| [CS800___lit_review___yamini.pdf](4/CS800___lit_review___yamini.pdf) | Lit Review of all the papers in pdf|
 
 
 ## YouTube Video Walkthrough
