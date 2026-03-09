@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{times} 			% use Times New Roman font
+
+\usepackage[margin=1in]{geometry}   % sets 1 inch margins on all sides
+\usepackage[hidelinks]{hyperref}               % for URL formatting
+\usepackage[pdftex]{graphicx}       % So includegraphics will work
+
+% for fancy page headings
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt} % to remove fancyhdr warning
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \thepage}
+\lhead{\small CS 800, Spring 2022 - HW4 - Ashish Acharya}
+
+% more packages and settings 
+\usepackage{datetime}
+\usepackage{indentfirst}  % always indent first paragraph in a section
+\usepackage[sort&compress, square, comma, numbers]{natbib}
+\usepackage[small, bf]{caption}
+\setlength{\parskip}{0.5em}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\begin{centering}
+{\large\textbf{HW4 - Literature Review}}\\
+\vspace{3mm} % add vertical space
+Ashish Acharya\\
+CS 800, Spring 2026\\
+\end{centering}
+
+%-------------------------------------------------------------------------
+
+% INSERT LIT REVIEW HERE
+
+\section{Introduction}
+% one paragraph describing the topic you will be reviewing and how the papers were selected for inclusion
+The recent advancements in single cell technology have provided the opportunity to look at the transcriptomic landscapes of complex tissues at a very high resolution and along with it comes the availability of large amount of single cell data. This new opportunity provides a challenge of handling this high-dimensional transcriptomic data to learn the true underlying complex biology and dynamic modeling (capacity to infer the complex regulatory networks that govern cell fate from highly sparse and noisy sequencing data) in an efficient and computationally feasible way. This review of literature examines five papers that address these challenges. Yang et al. \cite{yang2022scbert} initiated this trajectory by demonstrating how bidirectional transformer architectures could effectively learn gene-gene interactions to improve the accuracy of cell type annotation. Theodoris et al. \cite{theodoris2023transfer} subsequently expanded this paradigm into network biology, illustrating that models pretrained on millions of transcriptomes can successfully drive transfer learning in data-scarce, disease-specific scenarios. Cui et al.\cite{cui2024scgpt} further advanced multi-omic integration with scGPT, presenting a unified generative framework capable of predicting cellular responses to unseen genetic perturbations. In contrast to these sequence-based approaches, Wang et al. \cite{wang2023deciphering} addressed the need for explicit topological modeling, leveraging graph neural networks to map cell fate dynamics and identify crucial developmental regulators. Most recently, Oh et al. \cite{oh2025scmamba} extended the pretraining framework to selective state space models (scMamba), directly addressing the computational bottlenecks associated with processing highly heterogeneous single-nucleus neurodegenerative data. Collectively, these work records a critical architectural evolution in bioinformatics, mapping the progression from early attention mechanisms to state-of-the-art efficiency paradigms, thereby providing a comprehensive blueprint for the next generation of predictive single-cell analysis.
+
+\section{Summaries}
+% one paragraph for each of the papers that summarizes the main ideas
+Yang et al. \cite{yang2022scbert} introduces scBERT, a large-scale pretrained deep language model designed to overcome the limitations of traditional cell type annotation methods that rely heavily on highly variable genes and curated marker lists. By leveraging the Performer architecture to handle long sequences of over 16,000 genes without dimensionality reduction, scBERT learns general gene-gene interactions through self-supervised pretraining on millions of unlabelled scRNA-seq cells. The model converts continuous gene expressions into discrete bins (similar to bag-of-words) and combines them with gene2vec embeddings to perform supervised fine-tuning for highly accurate cell type annotation, novel cell type discovery, and robust batch-effect mitigation.
+
+Theodoris et al. \cite{theodoris2023transfer} presents Geneformer, a context-aware, attention-based model pretrained on a massive corpus of approximately 30 million single-cell transcriptomes (Genecorpus-30M) to enable predictions in network biology. Instead of binning, Geneformer utilizes a rank value encoding to represent the transcriptome of each single cell, which provides a non-parametric representation that protects against technical artifacts while prioritizing context-distinguishing genes. By fine-tuning on limited task-specific data, the model successfully boosts predictive accuracy across diverse downstream applications, ultimately enabling the identification of candidate therapeutic targets for diseases like cardiomyopathy through an innovative in silico gene deletion strategy.
+
+Cui et al. \cite{cui2024scgpt} expands the foundation model paradigm with scGPT, a generative pretrained transformer built across a repository of over 33 million cells to serve as a unified generalist model for single-cell multi-omics. The model establishes a generative pretraining workflow tailored for non-sequential omics data, jointly optimizing cell and gene representations through a specially designed attention mask. Demonstrating the transformative power of transfer learning, scGPT achieves state-of-the-art performance across a wide spectrum of tasks beyond mere annotation, including multi-batch integration, multi-omic integration, gene network inference, and crucially, predicting cellular responses to unseen genetic perturbations.
+
+Wang et al. \cite{wang2023deciphering} takes a distinct approach with CEFCON, a network-based computational framework designed specifically to decipher the driver regulators that dictate cell fate decisions from scRNA-seq data. Rather than relying purely on sequence-style foundation models, CEFCON employs a two-layer graph neural network (GNN) with a multi-head attention mechanism and contrastive learning to construct highly accurate, cell-lineage-specific gene regulatory networks (GRNs) using prior interaction knowledge. By applying network control theory to these inferred GRNs, CEFCON characterizes cell fate dynamics to successfully pinpoint both transcription factor and non-transcription factor driver regulators, as well as their regulon-like gene modules, offering deep mechanistic insights into developmental trajectories like mouse hematopoietic stem cell differentiation.
+
+Oh et al. \cite{oh2025scmamba} introduces scMamba, representing the latest architectural evolution tailored for the unique challenges of single-nucleus RNA sequencing (snRNA-seq), particularly within the highly heterogeneous context of neurodegenerative disorders. Because standard Transformers suffer from quadratic computational complexity with long input sequences, scMamba incorporates bidirectional Mamba blocks (selective state space models) to efficiently process long snRNA-seq data in its continuous form without the information loss associated with discretization or highly variable gene selection. Pretrained via masked expression modeling, scMamba demonstrates superior capability over benchmark methods in critical downstream tasks such as fine-grained cell type annotation, accurate doublet detection, and snRNA-seq imputation, ultimately improving the robustness of differential gene expression analysis across postmortem brain samples.
+
+\section{Synthesis}
+% a description of how the papers fit together and their relationship to the overall body of work in your topic, can be multiple paragraphs
+
+The reviewed papers collectively illustrate a profound paradigm shift in computational biology: the transition from isolated, task-specific algorithms to unified, large-scale deep learning frameworks capable of modeling the holistic complexities of cellular transcriptomics. Yang et al. \cite{yang2022scbert}, Theodoris et al. \cite{theodoris2023transfer}, and Cui et al. \cite{cui2024scgpt} trace the rapid evolution and scaling of Transformer-based foundation models—from scBERT to Geneformer and scGPT. These works demonstrate that by treating genes as "words/tokens" and cells as "documents", researchers can effectively map the self-supervised learning successes of natural language processing onto biological data. As these models scale in pretraining data size (up to 33 million cells) and refine their tokenization strategies—moving from discrete expression binning in scBERT to rank-value encoding in Geneformer, and finally to generative masking in scGPT—they unlock increasingly sophisticated zero-shot and few-shot capabilities.
+
+While the foundation models excel at learning broad, context-aware representations across diverse tissues, Wang et al. \cite{wang2023deciphering} highlights the complementary necessity of explicit topological modeling. By integrating prior biological knowledge into a Graph Neural Network architecture, CEFCON addresses the specific dynamic challenge of mapping cell fate decisions and inferring causality within gene regulatory networks (GRNs). This network-control perspective bridges a gap that pure attention-based embeddings sometimes obscure, proving that structurally constrained models are still highly relevant for elucidating explicit developmental drivers and mechanistic pathways.
+
+Finally, Oh et al. \cite{oh2025scmamba} connects these advanced representational frameworks to the bleeding edge of deep learning efficiency, directly addressing the computational bottlenecks of the Transformer architectures proposed in the earlier papers. By utilizing selective state space models (Mamba), this work proves that we can process raw, uncompressed single-nucleus transcriptomes efficiently, preserving critical biological signals that might otherwise be lost to dimensionality reduction or binning. Together, this body of literature forms a cohesive trajectory toward highly scalable, biologically interpretable, and computationally efficient AI systems.
+
+These tools not only automate and refine standard analyses like annotation and batch correction, but they also pave the way for predictive network biology, enabling in silico perturbation testing and the rapid discovery of novel therapeutic targets. Crucially, this scalable framework provides the exact computational foundation required for my own research into the single-cell transcriptomic landscape of Alzheimer's disease.
+
+%-------------------------------------------------------------------------
+\bibliographystyle{ieeetr} 		% use IEEE bibliography style
+\bibliography{litreview}
+
+\end{document}
+
