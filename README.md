@@ -39,11 +39,14 @@ CRN 32738
   * [Class slides](https://docs.google.com/presentation/d/1iplY-NFOtmETeDL0HUKEdZptg72iRb62J4P6q55sEds/edit)
 * Week 05:	Feb 23 Academic Communication - Presenting
   * [Class slides](https://docs.google.com/presentation/d/1NjMX8GJvPWLJng7IHXr-sB9nA2PcKFZrbxh585pq0b0/edit)
-* Week 06: Mar 2	Academic Communication - Writing 
-* Week 07:	Mar 9	Visualization Basics, Intro to R  
+* Week 06: Mar 2 A Vision for Trustworthy Web Archiving
+  * [Slides](https://docs.google.com/presentation/d/1UBpGkgQWNVQCe0zvh77ZyEMSibUSDkeRnf5zDxyrrIM/edit)
+  * [Video](https://virginiatech.zoom.us/rec/share/jM_lI1my3ydGVGoVIjoNSNfoao7ZxRkYwQHLB5sdxIknH5x3W5D0AIo5GTIQeOU.C6W-6sTQFAfhP0eB)
+* Week 07:	Mar 9	Writing and Reviewing
+  * [Class slides](https://docs.google.com/presentation/d/1uiMukqQHugvHpUwyUTz3Vjx2zsLnyoVTXqGYmzzJkZo/edit)
 * Week 08:	Mar 16	**NO CLASS - Spring Break**  
-* Week 09:	Mar 23	ODU-CS Faculty Presentations  
-* Week 10: Mar 30  ODU-CS Faculty Presentations 
+* Week 09:	Mar 23	Students Presentations (1/2)
+* Week 10: Mar 30  Students Presentations (2/2)
 * Week 11: Apr 6	TBA  
 * Week 12: Apr 13	Student Dissertation Presentations  
 * Week 13: Apr 20	Student Dissertation Presentations  
