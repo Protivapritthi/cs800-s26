@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \thepage}
+\lhead{\small CS 800, Spring 2026 - HW4 - Das}
+
+\usepackage{datetime}
+\usepackage{indentfirst}
+\usepackage[sort&compress, square, comma, numbers]{natbib}
+\usepackage[small, bf]{caption}
+
+\setlength{\parskip}{0.5em}
+\linespread{0.98}
+
+\begin{document}
+
+\begin{centering}
+{\large\textbf{HW4 - Literature Review}}\\
+\vspace{3mm}
+Protiva Das\\
+CS 800, Spring 2026\\
+\end{centering}
+
+\section{Introduction}
+
+The security of large language models (LLMs) has become an important research topic as these systems are increasingly used in applications such as conversational assistants, software development tools, and autonomous AI agents. Although LLMs demonstrate strong capabilities in language understanding and reasoning, recent studies show that they also introduce several security vulnerabilities. These include jailbreak attacks that bypass safety mechanisms through carefully crafted multi-turn interactions, adversarial prompts that manipulate model behavior, privacy risks when inference is performed through third-party services, and backdoor attacks that embed hidden triggers during training. These weaknesses can allow malicious users to extract sensitive data, generate unsafe outputs, or bypass built-in safeguards.
+
+Recent research therefore focuses on identifying attack surfaces of LLM systems and developing mechanisms to improve their security. Some studies analyze how adversarial prompts or structured dialogue strategies can bypass alignment mechanisms, while others investigate privacy leakage through internal model representations or evaluate the robustness of methods designed to generate secure outputs. In parallel, research has explored systematic studies of backdoor threats as well as guardrail frameworks that monitor and enforce safety policies in LLM agents. These five papers were selected because they represent recent research addressing different security challenges in large language models, including jailbreak attacks, privacy leakage during inference, adversarial prompt vulnerabilities, backdoor threats, and guardrail-based defense mechanisms.
+
+\section{Summaries}
+
+The work on guardrail mechanisms for LLM agents \cite{guardagent} introduces a framework designed to improve the safety of agents that interact with external environments. Unlike traditional language models that only generate text, modern LLM agents can perform actions such as calling APIs or interacting with software systems, increasing the risk of unsafe or unauthorized behavior. The proposed framework incorporates a guardrail agent that monitors and evaluates the actions performed by a target LLM agent. Safety policies are analyzed and converted into executable guardrail code that verifies whether agent actions violate predefined constraints. The framework also includes a memory module that retrieves relevant examples from previous tasks to improve reasoning about safety rules. Experiments on healthcare and web-based agent tasks show that guardrail-based monitoring can reduce unsafe actions without degrading the performance of the underlying LLM agent.
+
+Another line of research \cite{hiddennomore} investigates privacy risks when users rely on third-party infrastructure to run large language models. Because many LLMs require significant computational resources, users often depend on external providers for inference. This setup raises privacy concerns since intermediate representations generated during model computation may reveal information about the original input prompt. The study demonstrates that hidden states produced by transformer models can be used to reconstruct user prompts with very high accuracy. The attack leverages the causal structure of transformers and the finite vocabulary space to iteratively infer the original token sequence. Experimental results show that prompts can be recovered across several LLMs, revealing a serious vulnerability in outsourced inference systems. To mitigate this risk, the authors propose a distributed inference approach that divides computation across multiple parties so that no single participant can reconstruct the original prompt.
+
+Recent research has examined the reliability of methods designed to generate secure code using large language models \cite{securecode}. Several approaches attempt to reduce vulnerable code generation using techniques such as vulnerability-aware training, prefix tuning, and prompt optimization. However, their robustness under adversarial prompts remains uncertain. Researchers conduct a systematic audit using adversarial prompt modifications such as paraphrasing, contextual changes, and prompt rewording. The evaluation measures both security and functional correctness of generated code. Results show that many systems previously considered secure perform poorly when prompts are slightly modified, and static analysis tools often overestimate the security of generated outputs.
+
+Backdoor attacks represent another significant threat to the security of language models \cite{backdoorsurvey}. In such attacks, adversaries insert malicious triggers into training data so the model behaves normally on clean inputs but produces targeted outputs when the trigger appears. Because these behaviors remain hidden during normal evaluation, they are difficult to detect. This work provides a comprehensive review of backdoor attacks and countermeasures in natural language processing models.
+
+Another study focuses on jailbreak attacks that bypass safety alignment mechanisms in LLMs \cite{nexus}. Unlike single-prompt attacks, multi-turn jailbreak strategies distribute malicious intent across several conversational steps, making them harder for safety filters to detect. The proposed framework explores the adversarial search space by constructing a network of potential attack queries that gradually guide a conversation toward unsafe outputs. Experimental results show that this automated exploration method significantly increases jailbreak success rates across multiple open-source and commercial language models.
+
+\section{Synthesis}
+
+The reviewed papers collectively highlight how LLM security involves vulnerabilities across several stages of the model lifecycle. Attack surfaces appear during training, inference, and user interaction. For instance, the backdoor survey \cite{backdoorsurvey} shows how hidden triggers embedded in training data can activate malicious behaviors when specific inputs appear. In contrast, the privacy attack described in \cite{hiddennomore} demonstrates risks during deployment, where hidden states generated during inference can reveal the original input prompts.
+
+The papers also reveal increasing sophistication in adversarial strategies. Earlier machine learning attacks relied mainly on simple malicious inputs or data poisoning. More recent approaches exploit structured and multi-step interactions. The jailbreak framework in \cite{nexus} distributes malicious intent across multiple conversational turns, achieving attack success rates above 90\%. Similarly, the evaluation study in \cite{securecode} shows that models designed for secure code generation can still produce insecure outputs when prompts are slightly modified.
+
+Several studies propose defensive approaches to strengthen LLM security. The guardrail framework \cite{guardagent} monitors the behavior of LLM-based agents interacting with external systems and converts safety policies into executable rules that check agent actions. Experiments report guardrail accuracy above 98\% for healthcare tasks and around 83\% for web-based environments.
+
+Overall, the reviewed works suggest that securing large language models requires multi-layered protection across training pipelines, inference systems, and runtime monitoring. Future research will likely focus on integrating these approaches into unified security frameworks capable of addressing increasingly sophisticated attack strategies.
+
+\bibliographystyle{ieeetr}
+\bibliography{litreview}
+
+\end{document}
