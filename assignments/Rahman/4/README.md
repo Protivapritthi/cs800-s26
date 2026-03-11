@@ -1,6 +1,6 @@
 ### Assignment 4: Literature Review
 CS 800 Research Methods, Spring 2026 \
-Submitted by: Md Habibur Rahman \
+Submitted by: Md Habibur Rahman 
 
 ### Description
 In this assignment I am going to read five different paper in my research area of AI security. Using all the five papers writing their motivation, problem, techniques and dataset. Additionally I will summarize all the papers main ideas and synthesizing all those in laTex. Uploaded all the pdfs with marking, .tex, and a youtube link explaining all the things.
@@ -39,8 +39,7 @@ Rahman
 }
 ```
 DOI: [https://doi.org/10.48550/arXiv.2504.19855](https://doi.org/10.48550/arXiv.2504.19855) \
-PDF: [Red Teaming](../3/pdfs/adv_ai_2504.19855v2.pdf) \
-![Red Teaming](../3/imgs/adv_ai.png)
+PDF: [Red Teaming](../3/pdfs/adv_ai_2504.19855v2.pdf) 
 
 
 2. Cybersecurity AI: Evaluating Agentic Cybersecurity in Attack/Defense CTFs 
@@ -53,8 +52,7 @@ PDF: [Red Teaming](../3/pdfs/adv_ai_2504.19855v2.pdf) \
 }
 ```
 DOI: [https://doi.org/10.48550/arXiv.2510.17521](https://doi.org/10.48550/arXiv.2510.17521) \
-PDF: [CAI](../3/pdfs/cai_2510.17521v1.pdf) \
-![CAI](../3/imgs/cai.png)
+PDF: [CAI](../3/pdfs/cai_2510.17521v1.pdf) 
 
 
 
@@ -68,8 +66,7 @@ PDF: [CAI](../3/pdfs/cai_2510.17521v1.pdf) \
 }
 ```
 DOI: [https://doi.org/10.48550/arXiv.2502.10931](https://doi.org/10.48550/arXiv.2502.10931) \
-PDF: [D Cipher](../3/pdfs/D_cypher_2502.10931v2.pdf) \
-![D Cipher](../3/imgs/d_cipher.png)
+PDF: [D Cipher](../3/pdfs/D_cypher_2502.10931v2.pdf) 
 
 4. PENTESTGPT: Evaluating and Harnessing Large Language Models for Automated Penetration Testing 
 ```
@@ -87,8 +84,7 @@ month = aug
 }
 ```
 DOI: [https://doi.org/10.48550/arXiv.2308.06782](https://doi.org/10.48550/arXiv.2308.06782) \
-PDF: [PentestGPT](../3/pdfs/p_gpt_2308.06782v2.pdf) \
-![PentestGPT](../3/imgs/p_gpt.png)
+PDF: [PentestGPT](../3/pdfs/p_gpt_2308.06782v2.pdf) 
 
 
 5. Cybersecurity AI: Hacking the AI Hackers via Prompt Injection 
@@ -101,9 +97,8 @@ PDF: [PentestGPT](../3/pdfs/p_gpt_2308.06782v2.pdf) \
 }
 ```
 DOI: [https://doi.org/10.48550/arXiv.2508.21669](https://doi.org/10.48550/arXiv.2508.21669) \
-PDF: [Prompt Injection](../3/pdfs/p_inj_2508.21669v2.pdf) \
-![Prompt Injection](../3/imgs/p_inj.png)
+PDF: [Prompt Injection](../3/pdfs/p_inj_2508.21669v2.pdf) 
 
 
 ### YouTube
-Walkthrough on the papers and assignment on YouTube Link: []()
+Walkthrough on the papers and assignment on YouTube Link: [https://youtu.be/seF2pTmxSQ8](https://youtu.be/seF2pTmxSQ8)
