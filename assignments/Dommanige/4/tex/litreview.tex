@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{times} 			% use Times New Roman font
+
+\usepackage[margin=1in]{geometry}   % sets 1 inch margins on all sides
+\usepackage[hidelinks]{hyperref}               % for URL formatting
+\usepackage[pdftex]{graphicx}       % So includegraphics will work
+
+% for fancy page headings
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt} % to remove fancyhdr warning
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \thepage}
+\lhead{\small CS 800, Spring 2026 - HW4 - Chameli Dommanige}
+
+% more packages and settings 
+\usepackage{datetime}
+\usepackage{indentfirst}  % always indent first paragraph in a section
+\usepackage[sort&compress, square, comma, numbers]{natbib}
+\usepackage[small, bf]{caption}
+\setlength{\parskip}{0.5em}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\begin{centering}
+{\large\textbf{HW4 - Literature Review}}\\
+\vspace{3mm} % add vertical space
+Chameli Dommanige\\
+CS 800, Spring 2026\\
+\end{centering}
+
+%-------------------------------------------------------------------------
+
+% INSERT LIT REVIEW HERE
+
+\section{Introduction}
+% one paragraph describing the topic you will be reviewing and how the papers were selected for inclusion
+Tables are a major part of scientific research papers and are commonly used to represent structured data. Across domains, a considerable amount of data remains locked in tables. Table structures can vary from simple layouts to complex designs, including spanned or merged cells, complex headers that contain sub-headers, and even sub-sub headers. Extracting them in a machine-readable format is crucial for, but not limited to, scientific reproducibility, large-scale data analysis, and database construction. Modern optical character recognition (OCR) and table structure recognition (TSR) integrated systems are effective in extracting data from tables. Recently, several studies have also explored uncertainty estimation and reasoning capabilities for scientific tables. The papers selected for this literature review represent key work in this area, including research on uncertainty-aware extraction, benchmarking scientific table reasoning, evaluation of TSR methods, and prompting-based self-verification techniques. Together, these works highlight the challenges in extracting reliable data from complex scientific tables and motivate the need for improved self-verification and reasoning mechanisms.
+\section{Summaries}
+% one paragraph for each of the papers that summarizes the main ideas
+
+Ajayi et al. \cite{ajayi2023studyreproducibilityreplicabilitytable} conducted a systematic study on the reproducibility and replicability of table structure recognition methods. Even though many TSR papers report strong performance on specific datasets, it is often unclear whether these results can be reproduced or replicated using other datasets. In this study, the authors evaluate sixteen TSR methods by reproducing the experiments using the released implementations. They then test the replicability of these models across multiple datasets, including a newly introduced dataset called GenTSR, which contains tables from six different scientific domains. The study identifies several challenges related to incomplete documentation, dataset inconsistencies, and differences in evaluation procedures. These issues highlight the importance of standardized evaluation and transparent experimental practices in TSR research.
+
+Ajayi et al. \cite{ajayi2025uncertaintyawarecomplexscientifictable} propose an uncertainty-aware framework for extracting data from complex scientific tables. Existing TSR and OCR systems often produce incorrect results when tables contain complex layouts, and these errors require expensive manual verification. To address this problem, the authors introduce a framework that integrates TSR and OCR with conformal prediction to quantify uncertainty in extracted results. If the uncertainty score is high, the system flags the extraction for manual verification. The results show that incorporating uncertainty estimation improves extraction accuracy and significantly reduces the amount of manual verification required.
+
+Current TSR models can detect table cells but do not quantify prediction uncertainty, making it difficult and costly for humans to verify extracted table data. The paper \textit{Uncertainty Quantification in Table Structure Recognition} by Ajayi et al. \cite{ajayi2024uncertaintyquantificationtablestructure} proposes an uncertainty quantification framework for TSR using Test-Time Augmentation (TTA), which augments table images, fine-tunes models, and estimates uncertainty from prediction variations across augmented inputs. The paper introduces a novel TTA-m-based uncertainty quantification method for TSR, proposes masking and cell-complexity heuristics to estimate uncertainty, and builds an augmented dataset to evaluate uncertainty in TSR predictions.
+
+Existing table question-answering benchmarks and datasets do not adequately capture the structural complexity and reasoning challenges of standalone scientific tables, making it difficult to properly evaluate large language model (LLM) reasoning over complex scientific tables. Addressing this problem, Ajayi et al. \cite{Ajayi2025SciTableQAAQ} present SciTableQA, a benchmark dataset designed to evaluate question-answering capabilities on complex scientific tables. The paper constructs the SciTableQA benchmark by collecting complex scientific tables from multiple domains, generating question--answer pairs using LLMs, verifying them through human annotation, and evaluating LLM performance across structural, content-based, and domain-specific reasoning tasks.
+
+Wu et al. \cite{wu2023mathprogressiverectificationprompting} introduce Progressive Rectification Prompting (PRP), a prompting method designed to improve reasoning accuracy in LLMs. Existing Chain-of-Thought (CoT) prompting methods for math word problems are highly sensitive to reasoning errors and lack effective mechanisms for verifying and correcting incorrect answers, leading to low accuracy in LLM mathematical reasoning. PRP addresses this issue through an iterative verify-and-rectify process. The model first generates an answer and then verifies the reasoning through substitute verification. If the answer is incorrect, the model receives feedback and attempts to correct the reasoning in the next iteration. This approach allows the model to progressively refine its reasoning process and achieve higher accuracy. Although the work focuses on mathematical reasoning tasks, the idea of iterative verification and correction is relevant for other structured reasoning problems.
+
+\section{Synthesis}
+% a description of how the papers fit together and their relationship to the overall body of work in your topic, can be multiple paragraphs
+The reviewed papers collectively build the main research gap in table data extraction from complex scientific tables. Ajayi et al. \cite{ajayi2023studyreproducibilityreplicabilitytable} show that many existing TSR methods cannot be reliably reproduced or replicated across datasets. Their findings indicate that reported performance results may not always generalize well and emphasize the need for more reliable evaluation practices and extraction systems.
+Several studies have attempted to improve the reliability of table data extraction by incorporating uncertainty estimation. Ajayi et al. \cite{ajayi2025uncertaintyawarecomplexscientifictable} propose an uncertainty-aware framework that integrates TSR and OCR to identify unreliable extraction results and reduce manual verification effort. Similarly, Ajayi et al. \cite{ajayi2024uncertaintyquantificationtablestructure} focus on quantifying uncertainty in TSR predictions. 
+The SciTableQA benchmark introduced by Ajayi et al. \cite{Ajayi2025SciTableQAAQ} demonstrates that existing models struggle to reason over complex scientific tables that contain hierarchical headers and domain-specific information. The paper highlights the need for a benchmark dataset and introduces a dataset specifically designed for complex scientific tables. This work highlights the limitations of current evaluation datasets and shows that complex scientific tables require models that can understand both structural and semantic information.
+While these studies improve extraction accuracy, evaluation, and uncertainty estimation, they do not provide mechanisms for automatically verifying the correctness of extracted table data. The PRP method proposed by Wu et al. \cite{wu2023mathprogressiverectificationprompting} introduces an iterative verify-and-rectify strategy that allows models to detect incorrect reasoning and progressively refine their answers. Although PRP was originally designed for mathematical reasoning tasks, the underlying idea of iterative self-verification can be extended to table data extraction systems.
+
+Overall, these works highlight the need for table extraction systems that not only extract structured data but also verify the spatial and semantic correctness of the extracted information. This motivates the development of self-verification mechanisms that allow models to detect and correct errors in data extraction from complex scientific tables.
+
+%-------------------------------------------------------------------------
+\bibliographystyle{ieeetr} 		% use IEEE bibliography style
+\bibliography{litreview}
+
+\end{document}
