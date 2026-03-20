@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{times} 			% use Times New Roman font
+
+\usepackage[margin=1in]{geometry}   % sets 1 inch margins on all sides
+\usepackage[hidelinks]{hyperref}               % for URL formatting
+\usepackage[pdftex]{graphicx}       % So includegraphics will work
+
+% for fancy page headings
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt} % to remove fancyhdr warning
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \thepage}
+\lhead{\small CS 800, Spring 2026 - HW4 - Bikash Thapa}
+
+% more packages and settings 
+\usepackage{datetime}
+\usepackage{indentfirst}  % always indent first paragraph in a section
+\usepackage[sort&compress, square, comma, numbers]{natbib}
+\usepackage[small, bf]{caption}
+\setlength{\parskip}{0.5em}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\begin{centering}
+{\large\textbf{HW4 - Literature Review}}\\
+\vspace{3mm} % add vertical space
+Bikash Thapa\\
+CS 800, Spring 2026\\
+\end{centering}
+
+%-------------------------------------------------------------------------
+
+% INSERT LIT REVIEW HERE
+
+\section{Introduction}
+% one paragraph describing the topic you will be reviewing and how the papers were selected for inclusion
+In today's digital world, sensitive data are often stored, distributed and processed among many entities. However, areas including, but not limited to healthcare, finance and governmental organizations require balancing privacy with usability. Hence, there has been a significant growth in the field of privacy-preserving computation among organizations that need to collaborate on processing sensitive datasets without leaking the underlying information. Researchers are working on to solve the challenge of performing complex analytics like record linkage, genomic analysis and machine learning over highly distributed and encrypted data sources. Traditional cryptographic techniques for privacy-preserving computation such as Private Set Intersection (PSI) \cite{chen2017fast} and Multiparty PSI \cite{kolesnikov2017practical} often struggle with scalability, communication and computation overhead, or lack of support for real-valued evaluation. So, the papers selected for this review focuses on the latest advancements in this area using Homomorphic Encryption (HE) scheme. The works presented in the papers address the challenges of traditional crytographic technique in two ways. First, it improves the computation and communication overhead by shifting towards an additive aggregation framework instead of multiplication based aggregation. Second, it scales the protocol by using specialized mathematical mappings supporting privacy preserving operations on billions of encrypted data.
+
+\section{Summaries}
+% one paragraph for each of the papers that summarizes the main ideas
+Paper \cite{blindenbach2024squid} introduced an ultra secure encrypted database that utilized BGV homomorphic encryption scheme \cite{brakerski2014leveled} to store and query genetic data in public cloud environments. The framework allowed four database queries: COUNT, Minor Allele Frequency (MAF), Polygenic Risk Score (PRS) and Similarity calculation on the encrypted genetic database. The authors also introduced a vertical packing method where the genotype data of upto 49,960 patients was batched into a single ciphertext allowing homomorphic addition or multiplication on 49,960 data at a time. Additionally, the paper \cite{blindenbach2024squid} provided public-key swtiching technique that enabled multiple genomic researchers to query the same database encrypted under the data owner's secret key, and receive the results encrypted under the researcher's secret key. This technique prevented the need of data owner to be online after the data owner provided the encrypted database to the public cloud server.
+
+Paper \cite{koirala2025psmt} introduced a novel Private Segmented Membership Test (PSMT) protocol based on CKKS homomorphic encryption scheme \cite{cheon2017homomorphic} to determine whether the encrypted data identifier is present or not within a distributed encrypted data sources. The main innovation of the paper was that it designed a summation based aggregation framework for the memebership check instead of the product based. This prevented the consumption of multiplicative depth, allowing memebership check on large domain of data sources. Also, the paper used the concept of Domain Extension Polynomial (DEP) \cite{cheon2022efficient} and Chebyshev approximation to construct the membership check function so that it could handle large data domains. With this optimization, the experimental results showed that the protocol can support up to 4096 parties (data owners) and 512 queries (membership check), achieving a 5.6x performance improvement over previous Fully Homomorphic Encryption (FHE) based baselines in high-bandwidth environments.
+
+Paper \cite{koirala2025select} constructed a novel protocol to bridge the gap between the membership test \cite{koirala2025psmt}, and perform complex data analytics over the matched encrypted, distributed datasets. The authors in this paper adopted the summation based membership check introduced in \cite{koirala2025psmt}, but introduce two other new ideas. First, to efficiently evaluate the membership check and to reduce the false positives on those check, they use weak DEPs and specific bell-shaped function respectively. Second, they allow computation of any arbitrary function on the matched encrypted data items. Besides that, the notion of slot-wise windowing technique was presented in the paper that allowed the system to scale to 128-bit data identifiers. In summary, the benchmarking results done in the paper on real-world fraud datasets demonstrated that ELSA provides a 1.4x to 6.8x speedup over previous methods, completing complex encrypted analytics in under 65 seconds.
+
+Paper \cite{paik2025scalable} introduced a scalable PSI protocol based on BFV homomorphic encryption scheme \cite{fan2012somewhat} to determine whether the encrypted data identifier is present or not within a distributed encrypted data sources. The core contribution of the paper is nonzero preserving mapping (NPM), i.e., a technique inspired by the Pell equation that compresses large set items into smaller field elements while ensuring that only a zero input maps to zero. The output of the non zero preserving mapping was then used to evaluate the membership check function using Fermat's little theorem. The experimental results in the paper illustrated scalability, processing billions of dataset distributed across 1,024 servers in under a minute, achieving up to an 11.16x improvement in end-to-end latency compared to prior state-of-the-art solutions.
+
+Paper \cite{cheon2025ship} proposed a shallow and highly parallelizable CKKS \cite{cheon2017homomorphic} bootstrapping algorithm. The paper main innovation was the replacement of the homomorphic Discrete Fourier Transform (DFT) evaluation at the top-level modulus with a blind rotation and masking procedure, that reduced the homomorphic multiplicative depth from typical levels of 12 or more down to just 6 levels. This reduction in depth allowed the use of a smaller Ring-Learning With Errors (LWE) modulus and, consequently, a smaller polynomial ring degree of $N=2^{13}$ while maintaining 128-bit security. To implement these rotations efficiently, the authors introduced a hybrid strategy: a Column Method that utilizes the auxiliary modulus to avoid rescaling, and a Mux Method that handles encrypted rotation indices logarithmically. The experimental results showed that SHIP \cite{cheon2025ship} achieved a latency of 215ms on a 32-core CPU, which is $2.5\times$ faster than the HEaaN library. Unlike traditional methods that are largely sequential, SHIP's structure allows for high task-level parallelism, providing speedups of up to $18.1\times$ when scaled to 32 cores.
+
+\section{Synthesis}
+% a description of how the papers fit together and their relationship to the overall body of work in your topic, can be multiple paragraphs
+The five papers reviewed above show an important shift directly or indirectly in the field of PSI and PSMT, i.e., from theoretical feasibility to the practical, large-scale deployment. A unifying idea across these works is the maximum reduction of homomorphic multiplication operations in favor of additive frameworks and specialized mappings. Additionally, the foundation paper like SHIP \cite{cheon2025ship} provides the underlying efficiency needed for deep homomorphic computations by reducing the noise tax of bootstrapping, that indirectly supports the high-precision requirements of analytic protocols like \cite{koirala2025select}.
+
+Paper \cite{blindenbach2024squid} on encrypted database can be redesigned to perform filter check on the query adopting the PSMT. For example, \cite{blindenbach2024squid} relies on polynomial interpolation for the filter check since the range of values are not so large. For larger range of values, polynomial interpolation is practically not feasible. Hence, the concepts introduced in the papers \cite{koirala2025psmt}, \cite{koirala2025select}, \cite{paik2025scalable} can be adopted to create an encrypted database that supports filter check on large range of values as well. Similarly, the concept such as blind rotation, i.e., rotating the the position of an element in the cleartext vector homomorphically by an encrypted amount, can be taken from the paper \cite{cheon2025ship}, and use to delete the data in a vector for the encrypted database. 
+
+Hence, the papers we discussed above focus mainly on two areas in the field of PSI and PSMT using homomorphic encryption. First, it introduces several notions favoring in the reduction of critical bottlenecks such as the multiplicative depth of bootstrapping, the limitations of product-based aggregation in multi-party settings, and the high cost of processing wide-domain identifiers. Second, all the protocols designed are focused towards the achievement of a scalable real-world deployable application.
+
+%-------------------------------------------------------------------------
+
+\bibliographystyle{ieeetr} 		% use IEEE bibliography style
+\bibliography{litreview}
+
+\end{document}

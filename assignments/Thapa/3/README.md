@@ -16,16 +16,17 @@ This submission contains five papers from my research area (applied cryptography
 
 ### Paper 1: PSMT: Private Segmented Membership Test for Distributed Record Linkage
 
-**Reference:** Nirajan Koirala, Jonathan Takeshita, Jeremy Stevens, Sam Martin, and Taeho Jung. PSMT: Private segmented membership test for distributed record linkage. *Cryptology ePrint Archive*, 2025.
+**Reference:** N. Koirala, J. Takeshita, J. Stevens, S. Martin, and T. Jung, “PSMT: Private Segmented Membership Test for Distributed Record Linkage,” tech. rep., Cryptology ePrint Archive, 2025. Report 2025/072.
 
 **DOI:** This paper is a minor revision on this one: [https://doi.org/10.56553/popets-2024-0114](https://doi.org/10.56553/popets-2024-0114)
 
 ```bibtex
-@article{koirala2025psmt,
-  title={{PSMT}: Private Segmented Membership Test for Distributed Record Linkage},
-  author={Koirala, Nirajan and Takeshita, Jonathan and Stevens, Jeremy and Martin, Sam and Jung, Taeho},
-  journal={Cryptology ePrint Archive},
-  year={2025}
+@techreport{koirala2025psmt,
+    title={{PSMT: Private Segmented Membership Test for Distributed Record Linkage}},
+    author={Koirala, Nirajan and Takeshita, Jonathan and Stevens, Jeremy and Martin, Sam and Jung, Taeho},
+    institution={Cryptology ePrint Archive},
+    year={2025},
+    note={Report 2025/072}
 }
 ```
 
@@ -48,16 +49,19 @@ This submission contains five papers from my research area (applied cryptography
 
 ### Paper 2: Select-Then-Compute: Encrypted Label Selection and Analytics over Distributed Datasets using FHE
 
-**Reference:** Nirajan Koirala, Seunghun Paik, Sam Martin, Helena Berens, Tasha Januszewicz, Jonathan Takeshita, Jae Hong Seo, and Taeho Jung. Select-Then-Compute: Encrypted label selection and analytics over distributed datasets using FHE. In *Proceedings of the 2026 Network and Distributed System Security Symposium (NDSS)*, 2026.
+**Reference:** N. Koirala, S. Paik, S. Martin, H. Berens, T. Januszewicz, J. Takeshita, J. H. Seo, and T. Jung, “Select-Then-Compute: Encrypted Label Selection and Analytics over Distributed Datasets using FHE,” in Proceedings of the Symposium on Network and Distributed System Security, 2026.
 
 **DOI:** [https://dx.doi.org/10.14722/ndss.2026.240207](https://dx.doi.org/10.14722/ndss.2026.240207)
 
 ```bibtex
-@inproceedings{koirala2026select,
-  title={{Select-Then-Compute}: Encrypted Label Selection and Analytics over Distributed Datasets using {FHE}},
-  author={Koirala, Nirajan and Paik, Seunghun and Martin, Sam and Berens, Helena and Januszewicz, Tasha and Takeshita, Jonathan and Seo, Jae Hong and Jung, Taeho},
-  booktitle={Proceedings of the 2026 Network and Distributed System Security Symposium ({NDSS})},
-  year={2026}
+@inproceedings{koirala2025select,
+    author = {Koirala, Nirajan and Paik, Seunghun and Martin, Sam and Berens, Helena and Januszewicz, Tasha and Takeshita, Jonathan and Seo, Jae Hong and Jung, Taeho},
+    title = {{Select-Then-Compute: Encrypted Label Selection and Analytics over Distributed Datasets using FHE}},
+    year = {2026},
+    isbn = {9798991927680},
+    url = {https://dx.doi.org/10.14722/ndss.2026.240207},
+    doi = {10.14722/ndss.2026.240207},
+    booktitle = {Proceedings of the Symposium on Network and Distributed System Security}
 }
 ```
 
@@ -80,20 +84,21 @@ This submission contains five papers from my research area (applied cryptography
 
 ### Paper 3: SQUiD: ultra‑secure storage and analysis of genetic data for the advancement of precision medicine
 
-**Reference:** Jacob Blindenbach, Jiayi Kang, Seungwan Hong, Caline Karam, Thomas Lehner, and Gamze Gürsoy. SQUID: Ultra-secure storage and analysis of genetic data for the advancement of precision medicine. *Genome Biology*, 25(1):314, 2024.
+**Reference:** J. Blindenbach, J. Kang, S. Hong, C. Karam, T. Lehner, and G. G¨ursoy, “SQUiD: ultra-secure storage and analysis of genetic data for the advancement of precision medicine,” Genome Biology, vol. 25, no. 1, p. 314, 2024.
 
 **DOI:** [https://doi.org/10.1186/s13059-024-03447-9](https://doi.org/10.1186/s13059-024-03447-9)
 
 ```bibtex
 @article{blindenbach2024squid,
-  title={{SQUID}: Ultra-Secure Storage and Analysis of Genetic Data for the Advancement of Precision Medicine},
-  author={Blindenbach, Jacob and Kang, Jiayi and Hong, Seungwan and Karam, Caline and Lehner, Thomas and G{\"u}rsoy, Gamze},
-  journal={Genome Biology},
-  volume={25},
-  number={1},
-  pages={314},
-  year={2024},
-  publisher={Springer}
+    title={{SQUiD}: ultra-Secure Storage and Analysis of Genetic Data for the Advancement of Precision Medicine},
+    author={Blindenbach, Jacob and Kang, Jiayi and Hong, Seungwan and Karam, Caline and Lehner, Thomas and G{\"u}rsoy, Gamze},
+    journal={Genome Biology},
+    volume={25},
+    number={1},
+    pages={314},
+    year={2024},
+    doi={10.1186/s13059-024-03447-9},
+    url={https://doi.org/10.1186/s13059-024-03447-9}
 }
 ```
 
@@ -116,16 +121,19 @@ This submission contains five papers from my research area (applied cryptography
 
 ### Paper 4: Scalable Private Set Intersection over Distributed Encrypted Data
 
-**Reference:** Seunghun Paik, Nirajan Koirala, Jack Nero, Hyunjung Son, Yunki Kim, Jae Hong Seo, and Taeho Jung. Scalable private set intersection over distributed encrypted data. In *Proceedings of the 21st ACM Asia Conference on Computer and Communications Security (ASIA CCS ’26)*, 2026.
+**Reference:** S. Paik, N. Koirala, J. Nero, H. Son, Y. Kim, J. H. Seo, and T. Jung, “Scalable Private Set Intersection over Distributed Encrypted Data,” in Proceedings of the 2026 ACM Asia Conference on Computer and Communications Security, 2026.
 
 **DOI:** [https://doi.org/10.1145/3779208.3785272](https://doi.org/10.1145/3779208.3785272)
 
 ```bibtex
-@inproceedings{paik2026scalable,
-  title={Scalable Private Set Intersection over Distributed Encrypted Data},
-  author={Paik, Seunghun and Koirala, Nirajan and Nero, Jack and Son, Hyunjung and Kim, Yunki and Seo, Jae Hong and Jung, Taeho},
-  booktitle={Proceedings of the 21st {ACM} Asia Conference on Computer and Communications Security ({ASIA CCS} '26)},
-  year={2026}
+@inproceedings{paik2025scalable,
+    title={{Scalable Private Set Intersection over Distributed Encrypted Data}},
+    author={Paik, Seunghun and Koirala, Nirajan and Nero, Jack and Son, Hyunjung and Kim, Yunki and Seo, Jae Hong and Jung, Taeho},
+    booktitle={Proceedings of the 2026 ACM Asia Conference on Computer and Communications Security},
+    year={2026},
+    isbn={9798400723568},
+    url={https://doi.org/10.1145/3779208.3785272},
+    doi={10.1145/3779208.3785272}
 }
 ```
 
@@ -147,18 +155,21 @@ This submission contains five papers from my research area (applied cryptography
 
 ### Paper 5: General Functional Bootstrapping using CKKS
 
-**Reference:** Andreea Alexandru, Andrey Kim, and Yuriy Polyakov. General functional bootstrapping using CKKS. In *Proceedings of the Annual International Cryptology Conference (CRYPTO 2025)*, pages 304–337. Springer, 2025.
+**Reference:** A. Alexandru, A. Kim, and Y. Polyakov, “General Functional Bootstrapping Using CKKS,” in Advances in Cryptology – CRYPTO 2025, p. 304–337, 2025.
 
 **DOI:** [https://doi.org/10.1007/978-3-032-01881-6_10](https://doi.org/10.1007/978-3-032-01881-6_10)
 
 ```bibtex
-@inproceedings{alexandru2025general,
-  title={General Functional Bootstrapping using {CKKS}},
-  author={Alexandru, Andreea and Kim, Andrey and Polyakov, Yuriy},
-  booktitle={Proceedings of the Annual International Cryptology Conference ({CRYPTO} 2025)},
-  pages={304--337},
-  year={2025},
-  publisher={Springer}
+@inproceedings{fun2025Bootstrapping,
+    author = {Alexandru, Andreea and Kim, Andrey and Polyakov, Yuriy},
+    title = {{General Functional Bootstrapping Using CKKS}},
+    year = {2025},
+    isbn = {9783032018809},
+    url = {https://doi.org/10.1007/978-3-032-01881-6_10},
+    doi = {10.1007/978-3-032-01881-6_10},
+    booktitle = {Advances in Cryptology – CRYPTO 2025},
+    pages = {304–337},
+    numpages = {34}
 }
 ```
 
