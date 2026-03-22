@@ -6,26 +6,24 @@ Name: Protiva Das
 This submission contains five papers from my research area (LLM security, privacy, and adversarial robustness), each with Keshav’s 1st-pass summary (problem, approach, contributions), reference, DOI link, BibTeX entry, and a marked-up PDF highlighting the relevant sections.
 
 Directory structure
-
 assignments/Das/3/
 ├── README.md
 ├── A3_papers_marked/
-│ ├── paper1_GuardAgent_marked.pdf
-│ ├── paper2_HiddenNoMore_marked.pdf
-│ ├── paper3_SecureCodeGen_marked.pdf
-│ ├── paper4_BackdoorSurvey_marked.pdf
-│ └── paper5_NEXUS_marked.pdf
+│   ├── paper1_GuardAgent_marked.pdf
+│   ├── paper2_HiddenNoMore_marked.pdf
+│   ├── paper3_SecureCodeGen_marked.pdf
+│   ├── paper4_BackdoorSurvey_marked.pdf
+│   └── paper5_NEXUS_marked.pdf
 └── paper_images/
-├── paper 1.png
-├── paper 2.png
-├── paper 3.png
-├── paper 4.png
-└── paper 5.png
-
+    ├── paper 1.png
+    ├── paper 2.png
+    ├── paper 3.png
+    ├── paper 4.png
+    └── paper 5.png
 Paper 1: GuardAgent – Safeguard LLM Agents via Knowledge-Enabled Reasoning
 
 Reference:
-Xiang, Z., Zheng, L., Li, Y., Hong, J., Li, Q., Xie, H., ... & Li, B. (2025, July). Guardagent: safeguard LLM agents via knowledge-enabled reasoning. In ICML 2025 workshop on computer use agents.
+Xiang, Z., Zheng, L., Li, Y., Hong, J., Li, Q., Xie, H., ... & Li, B. (2025, July). Guardagent: safeguard LLM agents via knowledge-enabled reasoning.
 
 DOI:
 https://arxiv.org/abs/2406.09187
@@ -42,16 +40,16 @@ year={2025}
 1st pass (Keshav):
 
 Problem:
-LLM agents can autonomously execute actions using tools, but existing safety mechanisms are either hard-coded or limited to text moderation.
+LLM agents can autonomously execute actions using tools, but existing safety mechanisms are limited.
 
 Approach:
-GuardAgent introduces a separate LLM-based guard that converts policies into executable safety checks.
+GuardAgent introduces a separate LLM-based guard for enforcing policies.
 
 Contributions:
 
-First guardrail agent for LLM agents
-Code-based safety enforcement
-Benchmark-based validation
+Guardrail agent
+Code-based enforcement
+Benchmark validation
 
 Screenshot (Page 1):
 
@@ -59,10 +57,10 @@ Screenshot (Page 1):
 Marked-up PDF:
 A3_papers_marked/paper1_GuardAgent_marked.pdf
 
-Paper 2: Hidden No More – Attacking and Defending Private Third-Party LLM Inference
+Paper 2: Hidden No More
 
 Reference:
-Pal, A., Thomas, R. K., Zahran, L., Choi, E., Potti, A., & Goldblum, M. (2025). Hidden no more: attacking and defending private third-party LLM inference.
+Pal, A., Thomas, R. K., Zahran, L., Choi, E., Potti, A., & Goldblum, M. (2025).
 
 DOI:
 https://openreview.net/forum?id=QfD9P9IIoz
@@ -76,20 +74,6 @@ booktitle={ICLR 2025 workshop on building trust in language models and applicati
 year={2025}
 }
 
-1st pass (Keshav):
-
-Problem:
-Sensitive prompts can be reconstructed from hidden states.
-
-Approach:
-Designs reconstruction attacks and proposes Cascade defense.
-
-Contributions:
-
-Hidden-state attack
-Defense evaluation
-Cascade framework
-
 Screenshot (Page 1):
 
 
@@ -97,9 +81,6 @@ Marked-up PDF:
 A3_papers_marked/paper2_HiddenNoMore_marked.pdf
 
 Paper 3: Secure Code Generation
-
-Reference:
-Tessa, M., Olatunji, I. E., War, A., Klein, J., & Bissyandé, T. F. (2026).
 
 DOI:
 https://arxiv.org/abs/2601.07084
@@ -116,13 +97,7 @@ year={2026}
 Screenshot (Page 1):
 
 
-Marked-up PDF:
-A3_papers_marked/paper3_SecureCodeGen_marked.pdf
-
 Paper 4: Backdoor Survey
-
-Reference:
-Cheng, P., Wu, Z., Du, W., Zhao, H., Lu, W., & Liu, G. (2025).
 
 DOI:
 https://arxiv.org/abs/2309.06055
@@ -140,13 +115,7 @@ publisher={IEEE}
 Screenshot (Page 1):
 
 
-Marked-up PDF:
-A3_papers_marked/paper4_BackdoorSurvey_marked.pdf
-
 Paper 5: NEXUS
-
-Reference:
-Asl, J. R., Narula, S., Ghasemigol, M., Blanco, E., & Takabi, D. (2025).
 
 DOI:
 https://arxiv.org/abs/2510.03417
@@ -163,9 +132,6 @@ year={2025}
 
 Screenshot (Page 1):
 
-
-Marked-up PDF:
-A3_papers_marked/paper5_NEXUS_marked.pdf
 
 Video walkthrough
 
