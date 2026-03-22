@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{times} 			% use Times New Roman font
+
+\usepackage[margin=1in]{geometry}   % sets 1 inch margins on all sides
+\usepackage[hidelinks]{hyperref}               % for URL formatting
+\usepackage[pdftex]{graphicx}       % So includegraphics will work
+
+% for fancy page headings
+\usepackage{fancyhdr}
+\setlength{\headheight}{13.6pt} % to remove fancyhdr warning
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \thepage}
+\lhead{\small CS 800, Spring 2026 - Assignment 4 - Singh}
+
+% more packages and settings 
+\usepackage{datetime}
+\usepackage{indentfirst}  % always indent the first paragraph in a section
+\usepackage[sort&compress, square, comma, numbers]{natbib}
+\usepackage[small, bf]{caption}
+\setlength{\parskip}{0.5em}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\begin{centering}
+{\large\textbf{Assignment 4 - Literature Review}}\\
+\vspace{3mm} % add vertical space
+Anurudh Singh\\
+CS 800, Spring 2026\\
+\end{centering}
+
+%-------------------------------------------------------------------------
+
+% INSERT LIT REVIEW HERE
+
+\section{Introduction}
+% one paragraph describing the topic you will be reviewing and how the papers were selected for inclusion
+As cyber threats continue to grow in complexity and sophistication, traditional security mechanisms such as firewalls and intrusion detection systems are increasingly insufficient, particularly in critical infrastructure domains such as maritime operations. Honeynets and honeypots have emerged as proactive defense strategies, enabling organizations to deceive attackers, collect behavioral data, and improve threat intelligence. This review of the literature focuses on recent advances in honeynet architectures, adaptive deception strategies, and their application to network and cyber-physical systems. The selected articles were chosen because they represent both foundational frameworks in honeynet design and the latest research on hybrid, adaptive, and domain-specific deception technologies, providing insight into the evolving capabilities and challenges of these systems. 
+
+\section{Summaries}
+% one paragraph for each of the papers that summarizes the main ideas
+\textbf{Mokube and Adams (2007)} explore the fundamental concepts of honeypots, categorizing them by purpose (research or production) and interaction level (low, medium, high). The paper emphasizes the role of honeypots as proactive security tools that detect intrusions, gather intelligence, and supplement traditional defenses. The authors discuss strategic deployment considerations, including system placement, data management, and legal implications, while acknowledging limitations such as limited visibility and the potential for attackers to detect them. This work provides a foundational understanding of honeypot technologies and serves as a baseline for subsequent honeynet research.
+
+\textbf{Minjiao et al. (2022)} identify key limitations in traditional honeynets, including static configurations, predictable environments, and insufficient inducement of attacker behavior. To address these challenges, the authors propose a hybrid architecture integrating virtual and physical devices to create adaptive, realistic deception environments. The system uses behavioral analysis to dynamically redirect attackers, increasing engagement duration and intelligence collection. The paper demonstrates that combining virtual and physical resources enhances the realism and effectiveness of honeynets, addressing the shortcomings of static implementations. 
+
+\textbf{Javadpour et al. (2024)} provide a comprehensive survey of cyber deception techniques, highlighting emerging challenges, including attackers’ ability to detect honeypots, the lack of standardized evaluation metrics, and the limited exploration of SDN, cloud, and 5G-based honeypots. The paper categorizes deception strategies across multiple dimensions, including purpose, interaction level, deployment mode, and uniformity, and introduces a mathematical framework for evaluating performance. The study emphasizes the importance of structured, adaptive deception and identifies clear directions for future research, including topology shaping and AI-driven honeypot optimization. 
+
+\textbf{Evan and Uddin (2025)} examine the integration of honeynets and honeypots in production network environments to improve proactive threat detection. The authors implement a decoy network alongside real systems, simulate attacks using penetration testing tools, and monitor activity using traffic analysis tools. Their hybrid security model demonstrates that honeynets can enhance situational awareness and provide actionable insights into attacker behavior while complementing existing firewalls. This work highlights practical considerations for deploying deception systems in operational networks. 
+
+\textbf{Patil et al. (2025)} focus on the application of honeynets to mitigate Distributed Denial of Service (DDoS) attacks. The study identifies limitations of conventional reactive defenses and proposes a proactive multi-tier honeynet architecture with offensive capabilities to redirect malicious traffic into controlled environments. This approach enables the collection of high-fidelity attack telemetry and provides actionable intelligence to improve detection algorithms and threat response. The paper illustrates the value of active deception beyond passive monitoring, emphasizing the role of honeynets in adaptive cybersecurity strategies. 
+
+
+
+\section{Synthesis}
+% A description of how the papers fit together and their relationship to the overall body of work in your topic can be multiple paragraphs
+In all of these studies, a clear progression emerges in honeynet research, moving from foundational frameworks to domain-specific, hybrid, and adaptive architectures \cite{mokube2007honeypots}. Early work provides essential classifications and operational guidance for honeypots, establishing a baseline to understand their deployment, benefits, and limitations. Subsequent studies build on this foundation by introducing hybrid designs \cite{zheng2022honeynet} that combine virtual and physical devices, improving realism and engagement with attackers \cite{javadpour2024comprehensive}.
+
+The literature surveyed collectively emphasizes the importance of adaptability and intelligence-driven deception. Hybrid architectures that dynamically reconfigure in response to observed attacker behavior increase dwell time, engagement, and the quality of collected threat intelligence \cite{evan2025implementation}. Moreover, extensions into proactive and offensive capabilities demonstrate a shift from purely observational tools to active components of defense-in-depth strategies, particularly in mitigating volumetric attacks such as DDoS \cite{patil2025ddos}. 
+
+Despite these advances, several research gaps persist. Standardized metrics for evaluating deception effectiveness remain underdeveloped, limiting the ability to systematically compare systems. Furthermore, applications in critical infrastructure sectors, such as maritime networks, remain largely unexplored, presenting opportunities for domain-specific adaptations that account for operational constraints and cyber-physical interdependencies. The literature suggests that combining adaptive, high-fidelity deception environments with rigorous evaluation frameworks can significantly enhance proactive cybersecurity capabilities. 
+
+In summary, these papers collectively illustrate that honeynets are evolving from static, observational systems into dynamic, intelligent, and proactive defense mechanisms. Their integration into both enterprise and critical infrastructure networks holds promise for enhancing threat detection, analyzing attacker behavior, and informing strategic cybersecurity decisions. 
+%-------------------------------------------------------------------------
+\bibliographystyle{ieeetr} 		% use IEEE bibliography style
+\bibliography{litreview}
+
+\end{document}
